@@ -4,7 +4,12 @@ BCH address.
 
 Script can be used to periodically transfer BCH out of a single
 address (key).  My use-case is transferring money out of my yours.org
-wallet, leaving some in the wallet for tips and purchases.
+wallet, leaving some in the wallet for tips and purchases. Please note
+that it is specifically made for a use-case of small UTXOs, if there is
+one UTXO with $5 and you want to leave $1, it will not send $4 out of
+the wallet, but if a new transaction worth $1 comes in, the whole $5
+will be sent (or a dollar, depending on randomness). So this is really
+for consolidating many extremely small UTXOs to one larger transaction.
 
 It might be useful if you want to learn how to create transactions
 from UTXOs, if you only have key/address
